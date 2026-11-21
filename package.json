@@ -1,0 +1,29 @@
+{
+  "name": "clawsgo-usage-board",
+  "productName": "ClawsGO 算力看板",
+  "version": "1.0.0",
+  "private": false,
+  "description": "按任务与轮次查看 ClawsGO 每次对话消耗了多少算力（非官方桌面看板）",
+  "main": "main.cjs",
+  "scripts": {
+    "start": "electron .",
+    "demo": "electron . --demo",
+    "report": "node tools/report.cjs"
+  },
+  "keywords": [
+    "clawsgo",
+    "usage",
+    "credits",
+    "tokens",
+    "electron",
+    "windows"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^33.0.0"
+  },
+  "dependencies": {
+    "classic-level": "^1.4.1",
+    "koffi": "^3.3.8"
+  }
+}
