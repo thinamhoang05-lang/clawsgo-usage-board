@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; img-src 'self' data:" />
+    <title>算力看板</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="root" class="app">
+      <header class="hd" id="hd">
+        <div class="brand">
+          <span class="dot" id="dot"></span>
+          <span class="brand-name">算力看板</span>
+          <span class="plan" id="plan">Pro</span>
+        </div>
+        <div class="hd-actions" id="hd-actions">
+          <button class="icon" data-act="refresh" title="刷新">⟳</button>
+          <button class="icon" data-act="follow" title="只跟随 ClawsGO：切到别的应用时自动隐藏">◎</button>
+          <button class="icon" data-act="collapse" title="收起">—</button>
+          <button class="icon" data-act="quit" title="关闭">✕</button>
+        </div>
+      </header>
+
+      <div class="collapsed-bar" id="collapsed-bar" data-act="collapse">
+        <div class="cb-main">
+          <span class="cb-num" id="cb-used">—</span>
+          <span class="cb-sub" id="cb-sub">本月已用算力</span>
+        </div>
+        <div class="cb-side">
+          <span id="cb-balance">—</span>
+          <span class="cb-sub" id="cb-left">余额</span>
+        </div>
+      </div>
+
+      <main class="main" id="main"></main>
+
+      <footer class="ft" id="ft">
+        <div class="ft-left" id="ft-left"></div>
+        <div class="ft-right">
+          <button class="link" data-act="export">导出 CSV</button>
+          <span class="sep">·</span>
+          <button class="link" data-act="open">打开 ClawsGO</button>
+        </div>
+      </footer>
+
+      <section class="detail hidden" id="detail"></section>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
